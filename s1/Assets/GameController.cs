@@ -59,7 +59,7 @@ public class GameController : MonoBehaviour
     }
 
     private IEnumerator teki1_Appearance()
-    {/*
+    {
         yield return new WaitForSeconds (2f);
         Instantiate(teki1, new Vector3( 600, 600, -1), Quaternion.identity);//オブジェクト「teki1」を生成
         yield return new WaitForSeconds (0.5f);
@@ -118,7 +118,6 @@ public class GameController : MonoBehaviour
         Instantiate(teki5, new Vector3( rnd, 500, 0), Quaternion.identity);//オブジェクト「teki5」を生成
         yield return new WaitForSeconds (1);
         Instantiate(teki5, new Vector3( rnd, 500, 0), Quaternion.identity);//オブジェクト「teki5」を生成
-        */
         yield return new WaitForSeconds (0.7f);
         Instantiate(boss, new Vector3( 550, 300, 0), Quaternion.identity);//オブジェクト「boss」を生成
         boss_appear = 1;
