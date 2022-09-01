@@ -12,7 +12,7 @@ public class GameController : MonoBehaviour
     public GameObject teki3; 
     public GameObject teki4;
     public GameObject teki5;
-    public GameObject boss,ziki;
+    public GameObject boss,ziki,ziki_right,ziki_left;
     public GameObject message,bossHP_bar,boss_name;
     public GameObject ziki_tatie;
     public GameObject teki_tatie;
@@ -42,6 +42,8 @@ public class GameController : MonoBehaviour
                 teki_tatie.gameObject.SetActive(true);
                 boss_name.gameObject.SetActive(true);
                 ziki.GetComponent<ziki>().enabled = false;
+                ziki_right.GetComponent<ziki_right>().enabled = false;
+                ziki_left.GetComponent<ziki_left>().enabled = false;
             }
             if(boss_term == 2)
             {
@@ -50,12 +52,14 @@ public class GameController : MonoBehaviour
                 teki_tatie.gameObject.SetActive(false);
                 bossHP_bar.gameObject.SetActive(true);
                 ziki.GetComponent<ziki>().enabled = true;
+                ziki_right.GetComponent<ziki_right>().enabled = true;
+                ziki_left.GetComponent<ziki_left>().enabled = true;
             }
         }
     }
 
     private IEnumerator teki1_Appearance()
-    {
+    {/*
         yield return new WaitForSeconds (2f);
         Instantiate(teki1, new Vector3( 600, 600, -1), Quaternion.identity);//オブジェクト「teki1」を生成
         yield return new WaitForSeconds (0.5f);
@@ -114,7 +118,8 @@ public class GameController : MonoBehaviour
         Instantiate(teki5, new Vector3( rnd, 500, 0), Quaternion.identity);//オブジェクト「teki5」を生成
         yield return new WaitForSeconds (1);
         Instantiate(teki5, new Vector3( rnd, 500, 0), Quaternion.identity);//オブジェクト「teki5」を生成
-        yield return new WaitForSeconds (7f);
+        */
+        yield return new WaitForSeconds (0.7f);
         Instantiate(boss, new Vector3( 550, 300, 0), Quaternion.identity);//オブジェクト「boss」を生成
         boss_appear = 1;
     }

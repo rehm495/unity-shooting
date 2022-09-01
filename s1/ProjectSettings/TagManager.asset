@@ -47,6 +47,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: tama
+    uniqueID: 4105222951
+    locked: 0
   - name: UI
     uniqueID: 3960628461
     locked: 0

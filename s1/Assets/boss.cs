@@ -129,14 +129,14 @@ public class boss : MonoBehaviour
                 Instantiate(knife, transform.position, Quaternion.identity);
                 knife.GetComponent<knife>().p1 = pos;
                 knife.GetComponent<knife>().p2 = new Vector3(1000,500,0);
-                knife.GetComponent<knife>().p3 = player_pos + new Vector3(0,200*(i - Mathf.CeilToInt((7/2))),0);
+                knife.GetComponent<knife>().p3 = player_pos + new Vector3(0,100*(i - Mathf.CeilToInt((7/2))),0);
             }
             else
             {
                 Instantiate(knife, transform.position, Quaternion.identity);
                 knife.GetComponent<knife>().p1 = pos;
                 knife.GetComponent<knife>().p2 = new Vector3(-1000,500,0);
-                knife.GetComponent<knife>().p3 = player_pos + new Vector3(0,200*(i - Mathf.CeilToInt((7/2))),0);
+                knife.GetComponent<knife>().p3 = player_pos + new Vector3(0,100*(i - Mathf.CeilToInt((7/2))),0);
             }
         }
     }
